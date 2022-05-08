@@ -28,10 +28,6 @@ body {
   position: relative;
 }
 
-.center a{
-
-}
-
 .navbar a:hover {
   background-color: #ddd;
 }
@@ -86,10 +82,132 @@ footer{
   text-align: center;
 }
 
+.about{
+  color: white;
+  padding: 1%;
+  font-family: 'Montserrat', sans-serif;
+}
 
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.column p{
+  padding: 3%;
+  margin: 3%;
+  background-color: cornsilk;
+  border-radius: 16px;
+  opacity: 0.9;
+}
+
+.column img{
+  display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
   }
+}
+
+div.gallery {
+  max-width: 300px;
+  max-height: 250px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 500px;
+  height: auto;
+}
+
+div.desc {
+  text-align: center;
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 1%;
+  float: left;
+  width: 25%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2 ,h4{
+  text-align: center;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 80%;
+margin: auto;
 }
